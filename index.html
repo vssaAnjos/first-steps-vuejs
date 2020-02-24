@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-
-   
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Aula 01 - Vue.js</title> 
@@ -10,15 +8,18 @@
 <body>
     <div id="app">
        <h1> {{titulo}} </h1>
+
+       <ul>
+           <li v-for="animal of animais ">{{animal}}  </li>
+       </ul>
+       <ul>
+           <li v-for="fruta of frutas">{{fruta.nome}} - {{fruta.quantidade}}
+               <span v-if="fruta.quantidade === 0  "> - Sem estoque </span>
+           </li>
+       </ul>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <script> 
-        var app = new Vue({
-            el:"#app",
-            data:{
-                titulo: "Aula 01 - Vue.js"
-            }
-        });
-    </script>
+    <script src="scripts.js"></script>
+   
 </body>
 </html>
