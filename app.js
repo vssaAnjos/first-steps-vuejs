@@ -4,5 +4,17 @@ const app = new Vue({
         titulo:'Gym with Vue',
         tarefas:[],
         novaTarefa:''
+    },
+    methods:{
+        agregarTarefa: function(){
+            this.tarefas.push({
+                nome:this.novaTarefa,
+                estado:false
+            });
+            this.novaTarefa='';
+        },
+        editarTarefa: function(index){
+            this.tarefas[index].estado=true;
+        }
     }
 })
