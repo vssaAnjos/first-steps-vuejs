@@ -15,6 +15,10 @@ const app = new Vue({
         },
         editarTarefa: function(index){
             this.tarefas[index].estado=true;
+        },
+        eliminar:function(index){
+            console.log(index);
+            this.tarefas.splice(index,1);
         }
     }
 })
